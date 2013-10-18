@@ -93,7 +93,7 @@ class Fraccion
     
     
     if racional.is_a? Integer
-	r = Fraccion.new(@num , @den * ra) 
+	r = Fraccion.new(@num * 1, @den * ra) 
 	else
 	r = Fraccion.new(@num*ra.den, @den*ra.num)
 	end
