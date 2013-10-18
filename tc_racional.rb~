@@ -8,16 +8,16 @@ require "./racional.rb"
 require "test/unit"
 
 class Test_Fraccion < Test::Unit::TestCase
-        def test1
-                
+        def test_simple
+                # Instanciación
                 assert_equal( "2/3", Fraccion.new(2,3).to_s )
                 assert_raise( ArgumentError) { Fraccion.new(1, 0) } # Fallo
         end
         
-        def test2
+        def test_simple2
                 # Suma
-                assert_equal( "7/3", (Fraccion.new(5, 3).suma( Fraccion.new(2, 3) ) ).to_s )
-                assert_equal( "27/5", (Fraccion.new(2, 5).suma( 5 )).to_s )
+                assert_equal( "4/3", (Fraccion.new(2, 3).suma( Fraccion.new(2, 3) ) ).to_s )
+                assert_equal( "7/5", (Fraccion.new(2, 5).suma( 1 )).to_s )
                 # Resta
                 assert_equal( "1/15", (Fraccion.new(2, 3).resta( Fraccion.new(3, 5) ) ).to_s )
                 assert_equal( "-1/2", (Fraccion.new(1, 2).resta( 1 )).to_s )
